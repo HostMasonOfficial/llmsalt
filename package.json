@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/llmsalt/llmsalt.git"
+    "url": "git://github.com/HostMasonOfficial/llmsalt.git"
   },
   "saltcorn": {
     "plugin": true
