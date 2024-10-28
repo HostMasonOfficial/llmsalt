@@ -4,6 +4,12 @@ const db = require("@saltcorn/data/db");
 const { getCompletion, getEmbedding } = require("./generate");
 const { OPENAI_MODELS } = require("./constants.js");
 
+const headers = [
+  {
+    script: `/plugins/public/llmsalt@${require("./package.json").version}/llmsalt.js`,
+  },
+];
+
 const configuration_workflow = () =>
   new Workflow({
     steps: [
@@ -160,6 +166,8 @@ const functions = (config) => ({
 
 module.exports = {
   sc_plugin_api_version: 1,
+  plugin_name: "llmsalt",
+  headers,
   configuration_workflow,
   functions,
   modelpatterns: require("./model.js"),
