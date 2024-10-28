@@ -6,7 +6,7 @@ const { OPENAI_MODELS } = require("./constants.js");
 
 const headers = [
   {
-    script: `/plugins/public/llmsalt@${require("./package.json").version}/llmsalt.js`,
+    script: `/plugins/public/llm@${require("./package.json").version}/llmsalt.js`,
   },
 ];
 
@@ -166,7 +166,7 @@ const functions = (config) => ({
 
 module.exports = {
   sc_plugin_api_version: 1,
-  plugin_name: "llmsalt",
+  plugin_name: "llm",
   headers,
   configuration_workflow,
   functions,
